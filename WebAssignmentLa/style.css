@@ -1,0 +1,373 @@
+/* Reset  default styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF_reg", sans-serif;
+}
+
+/* Body styling */
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* menu button */
+
+.menu {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #000000;
+    display: flex;
+    list-style: none;
+    position: fixed;
+}
+
+.menu span {
+    font-family: "SF_bold", sans-serif;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: "SF_bold", sans-serif;
+    
+}
+
+.menu .link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu .item {
+    position: relative;
+}
+
+.menu .item .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    border-radius: 0 0 16px 16px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #cccccc;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+    pointer-events: none;
+    list-style: none;
+}
+
+.menu .item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    border-top: transparent;
+    border-color: white;
+}
+
+.menu .item:hover .link {
+    color: black;
+    border-radius: 16px 16px 0 0;
+}
+
+.menu .item:hover .link::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.submenu .submenu-item {
+    width: 100%;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link {
+    display: block;
+    padding: 12px 24px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-item:last-child .submenu-link {
+    border-bottom: none;
+}
+
+.submenu .submenu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.submenu .submenu-link:hover:before {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.submenu .submenu-link:hover {
+    color: #ffffff;
+}
+
+/* end menu button*/
+
+/* header section */
+.header {
+    background: url("/images/planes.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    text-align: center;
+    padding: 50px 0 100px 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "SF_reg", sans-serif;
+}
+
+.header h2 {
+    font-size: 50px;
+}
+
+.header p {
+    font-size: 24px;
+}
+
+/* Rate section */
+.travelify {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0 50px 0;
+}
+
+.travelify h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "SF_bold", sans-serif;
+}
+
+.travelify p {
+    font-size: 23px;
+    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
+}
+
+.customers h2 {
+    font-size: 50px;
+    padding-top: 3vh;
+    font-family: "SF_bold", sans-serif;
+}
+
+.customers p{
+    font-size: 20px;
+}
+
+.feedback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Destinations section */
+.destinations {
+    padding: 60px 0px;
+    background: url("/images/clouds.jpg") no-repeat;
+    background-size: 100% 120em;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.destinations h2 {
+    display: flex;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "SF_bold", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.destination-card_Paris {
+    background: url("/images/paris.jpg") no-repeat;
+    background-size: 100% 80vh;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-cards h3{
+    font-size: 84px;
+    margin-bottom: 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.1px black;
+}
+
+
+.destination-cards p {
+    display: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+
+.destination-card_NewYork #price {
+    color: peachpuff;
+}
+
+.destination-card_Tokyo #price {
+    color: rgb(59, 59, 229);
+}
+
+.destination-card_Paris #price {
+    color: lightblue;
+}
+
+.destination-cards button {
+    margin-top: 1em;
+    width: 200px;
+    height: 50px;
+    font-family: "SF_bold", sans-serif;
+    border-radius: 2em;
+    background-color: white;
+    border-color: black;
+}
+
+.destination-cards a {
+    text-decoration: none;
+}
+
+/* overlay on destination cards */
+
+.overlay {
+    display: none;
+    width: 100%;    
+    background: rgba(0, 0, 0, 0.6);
+    transition: bottom 0.4s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.destination-card_NewYork:hover .overlay,
+.destination-card_Paris:hover .overlay,
+.destination-card_Tokyo:hover .overlay {
+    display: block;
+    transition: opacity 0.3s ease-in-out 0.2s;
+
+}
+
+.destination-card_NewYork:hover p,
+.destination-card_Paris:hover p,
+.destination-card_Tokyo:hover p {
+    display: block;
+    transition: opacity 0.3s ease-in-out 0.2s;
+}
+
+.destination-card_Tokyo {
+    background: url("/images/tokyo.jpg") no-repeat;
+    background-size: 120% 80vh;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card_NewYork {
+    background: url("/images/NewYork.jpg") no-repeat;
+    background-size: 120% 80vh;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* About section */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 86px;
+    margin-bottom: 20px;
+    font-family: "SF_bold", sans-serif;
+}
+
+.about p {
+    font-size: 32px;
+    padding: 0 25% 0 25%;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* connect new fonts */
+
+@font-face {
+    font-family: "SF_reg";
+    src: url("/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+    font-family: "SF_bold";
+    src: url("/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF");
+}
