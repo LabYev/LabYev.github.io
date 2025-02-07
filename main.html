@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">
+
+    <!-- creating a navigation menu -->
+        <div class="item">
+            <a href="#" class="link">
+                <span> Navigation </span>
+            </a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="#home" class="submenu-link"> Travelify </a>
+                </div>
+                <div class="submenu-item">
+                    <a href="#destinations" class="submenu-link"> Tours </a>
+                </div>
+                <div class="submenu-item">
+                    <a href="#about" class="submenu-link"> About us </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <section id="home">
+        <section class="header">
+            <h2>Welcome to Travelify</h2>
+            <p>Your dream vacation starts here</p>
+        </section>
+    </section>
+    <section id="Travelify" class="travelify">
+        <div>
+            <h2>Travelify</h2>
+            <p>We are a leading travel agency dedicated to creating the best travel experiences for our customers.</p>
+            <p>"Travel like a millionaire"</p>
+        </div>
+        <div class="customers">
+            <h2>What can you get in our`s tours?</h2>
+            <div class="feedback">
+                <p>"It was just incredible! This week in Paris was unforgettable! We lived in a 5-star hotel near the Eiffel Tower! We were
+                taken on excursions around the city every day. I feel like a local now!"</p>
+                <p>"It was a very relaxing tour of Japan. We were given a choice of two hotels - one in Tokyo itself and the other outside
+                Tokyo at a hot spring. I chose the second option and did not regret it at all. We were introduced to traditional
+                Japanese culture: geisha, samurai, Japanese faith and traditions. I highly recommend it to everyone."</p>
+                <p>"New York is simply immense. We stayed in a 5-star hotel in Manhattan, and despite even a few excursions a day, I
+                probably only explored the city by 20 percent. This tour gave me the idea of moving to this city in the future, I liked
+                it so much."</p>
+            </div>    
+        </div>
+    </section>
+    <!-- destination section -->
+    <section id="destinations" class="destinations">
+        <h2>Top Destinations</h2>
+        <div class="destination-cards">
+            <div class="destination-card_Paris">
+                <h3>Paris</h3>
+                <div class="overlay">
+                    <p>The city of love awaits you!</p>
+                    <p id="price">600€ per person</p>
+                    <button onclick="selectTour('Paris', 600)"> BUY TOUR </button>
+                </div>    
+            </div>
+            <div class="destination-card_Tokyo">
+                <h3>Tokyo</h3>
+                <div class="overlay">
+                    <p>Explore the modern and traditional sides of Japan.</p>
+                    <p id="price">1900€ per person</p>
+                    <button onclick="selectTour('Tokyo', 1900)"> BUY TOUR </button>
+                </div>
+            </div>
+            <div class="destination-card_NewYork">
+                <h3>New York</h3>
+                <div class="overlay">
+                    <p>The Big Apple is ready for your next adventure!</p>
+                    <p id="price">900€ per person</p>
+                    <button onclick="selectTour('New York', 900)"> BUY TOUR </button>
+            </div>
+            <!-- transfer on cart page -->
+            <script>
+                function selectTour(name, price) {
+                    localStorage.setItem("selectedTour", JSON.stringify({ name, price }));
+                    window.location.href = "shopping.html"; 
+                }
+            </script>
+        </div>
+    </section>
+    <!-- about us page -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Trevelify has been operating for 5 years and is the best in the industry. Hundreds of satisfied customers and the best
+        reviews. We provide the best service for tourists in three countries where we have contracts with the best local hotels.</p>
+    </section>
+
+    <footer>
+        <p>Copyright 2025 Travelify | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
