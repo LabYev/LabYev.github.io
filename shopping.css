@@ -133,7 +133,49 @@ body {
 
 }
 
+@media (max-width: 600px) {
+    body {
+        background-image: none;
+        background-color: white;
+    }
 
+    .container {
+        display: block;
+        margin-bottom: 3em;
+        padding: 0;
+    }
+
+    .cart {
+        display: grid;
+        border-color: black;
+        align-items: center;
+        margin: 0 1em;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .cart-item_1 {
+        align-items: center;
+    }
+
+    .cart-item label{
+        font-size: 25px;
+    }
+
+    .cart-item p {
+        font-size: 25px;
+    }
+
+    .order-form {
+        display: grid;
+        margin: 0 1em 0 1em;
+        width: 90%;
+    }
+
+    .order-form h2 {
+        font-size: 20px;
+    }
+}
 
 @font-face {
     font-family: "SF_reg";
