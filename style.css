@@ -360,6 +360,72 @@ footer {
     text-align: center;
 }
 
+/* adaptation for mobile devices */
+@media (max-width: 600px) {
+
+    .customers h2 {
+        font-size: 40px;
+    }
+
+    .feedback{
+        display: grid;
+    }
+
+    .feedback p {
+        margin-bottom: 1em;
+    }
+
+    .destinations {
+        background-size: cover;
+    }
+
+    .destination-cards {
+        display: grid;
+
+    }
+
+    .destination-card_NewYork, .destination-card_Paris, .destination-card_Tokyo {
+        display: block;
+        object-fit: cover;
+        width: 99%;
+        margin: 1em 0 1em 0;
+
+    }
+
+    .destination-card_NewYork p,
+    .destination-card_Paris p,
+    .destination-card_Tokyo p {
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    width: 100%;
+    }
+
+    .overlay {
+        display: none;
+        width: 100%;
+    }
+
+    .destination-card_NewYork:hover .overlay,
+    .destination-card_Paris:hover .overlay,
+    .destination-card_Tokyo:hover .overlay {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    }
+
+
+
+    .about h2 {
+        font-size: 40px;
+    }
+
+    .about p{
+        padding: 0 10px 0 10px;
+        font-size: 20px;
+    }
+}
+
 /* connect new fonts */
 
 @font-face {
