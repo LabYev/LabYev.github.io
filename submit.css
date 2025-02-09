@@ -44,6 +44,26 @@ p {
     background: #0056b3;
 }
 
+@media (max-width: 600px) {
+    body {
+        background-image: none;
+        display: block;
+        margin-top: 5em;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 20px 40px;
+    }
+}
+
 @font-face {
     font-family: "SF_reg";
     src: url("/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF");
