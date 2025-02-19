@@ -1,0 +1,91 @@
+* {
+    font-family: "SF_reg", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("images/clouds_2.jpg") no-repeat;
+}
+
+/* menu section */
+.menu_section {
+    display: flex;
+    background-color: rgb(62, 11, 56);
+    justify-content: space-around;
+    color: white;
+    padding: 1.5%;
+}
+
+.pick {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.pick :hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+/* end menu section */
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+h1,
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "SF_bold", sans-serif;
+}
+
+.slogan {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.rate {
+    background: #eef;
+    padding: 40px;
+    border-left: 5px solid #007BFF;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.about {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+@font-face {
+    font-family: "SF_reg";
+    src: url("fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+    font-family: "SF_bold";
+    src: url("fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF");
+}

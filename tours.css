@@ -1,0 +1,166 @@
+* {
+    font-family: "SF_reg", sans-serif;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: url("images/clouds.jpg") no-repeat;
+    background-size: 100%;
+}
+/* menu section */
+.menu_section {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    color: white;
+    padding: 1.2%;
+}
+
+.pick {
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.pick :hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* end menu section */
+
+.destinations {
+    padding: 60px 0px;
+    text-align: center;
+
+}
+
+.destinations h2 {
+    display: flex;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "SF_bold", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.destination-card_Paris {
+    background: url("images/paris.jpg") no-repeat;
+    background-size: 100% 80vh;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.destination-cards h3 {
+    font-size: 84px;
+    margin-bottom: 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.1px black;
+}
+
+
+.destination-cards p {
+    display: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+
+.destination-card_NewYork #price {
+    color: peachpuff;
+}
+
+.destination-card_Tokyo #price {
+    color: rgb(59, 59, 229);
+}
+
+.destination-card_Paris #price {
+    color: lightblue;
+}
+
+.destination-cards button {
+    margin-top: 1em;
+    width: 200px;
+    height: 50px;
+    font-family: "SF_bold", sans-serif;
+    border-radius: 2em;
+    background-color: white;
+    border-color: black;
+}
+
+
+/* overlay on destination cards */
+
+.overlay {
+    display: none;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: bottom 0.4s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.destination-card_NewYork:hover .overlay,
+.destination-card_Paris:hover .overlay,
+.destination-card_Tokyo:hover .overlay {
+    display: block;
+    transition: opacity 0.3s ease-in-out 0.2s;
+
+}
+
+.destination-card_NewYork:hover p,
+.destination-card_Paris:hover p,
+.destination-card_Tokyo:hover p {
+    display: block;
+    transition: opacity 0.3s ease-in-out 0.2s;
+}
+
+.destination-card_Tokyo {
+    background: url("/images/tokyo.jpg") no-repeat;
+    background-size: 120% 80vh;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.destination-card_NewYork {
+    background: url("images/NewYork.jpg") no-repeat;
+    background-size: 120% 80vh;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+@font-face {
+    font-family: "SF_reg";
+    src: url("fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+    font-family: "SF_bold";
+    src: url("fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF");
+}

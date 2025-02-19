@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tours.css">
+    <script href="script.js"></script>
+</head>
+<body>
+    <section class="menu_section">
+        <div class="pick">
+            <a href="index.html">Main</a>
+        </div>
+        <div class="pick">
+            <a href="about.html">About</a>
+        </div>
+        <div class="pick">
+            <a href="tours.html">Tours</a>
+        </div>
+    </section>
+    
+    <section id="destinations" class="destinations">
+        <h2>Top Destinations</h2>
+        <div class="destination-cards">
+            <div class="destination-card_Paris">
+                <h3>Paris</h3>
+                <div class="overlay" class="overlay_mobil">
+                    <p>The city of love awaits you!</p>
+                    <p id="price">600€ per person</p>
+                    <button onclick="selectTour('Paris', 600)"> BUY TOUR </button>
+                </div>
+            </div>
+            <div class="destination-card_Tokyo">
+                <h3>Tokyo</h3>
+                <div class="overlay" class="overlay_mobil">
+                    <p>Explore all sides of Japan.</p>
+                    <p id="price">1900€ per person</p>
+                    <button onclick="selectTour('Tokyo', 1900)"> BUY TOUR </button>
+                </div>
+            </div>
+            <div class="destination-card_NewYork">
+                <h3>New York</h3>
+                <div class="overlay" class="overlay_mobil">
+                    <p>The Big Apple is ready for your!</p>
+                    <p id="price">900€ per person</p>
+                    <button onclick="selectTour('New York', 900)"> BUY TOUR </button>
+                </div>
+                <!-- transfer on cart page -->
+                <script>
+                    function selectTour(name, price) {
+                        localStorage.setItem("selectedTour", JSON.stringify({ name, price }));
+                        window.location.href = "shopping.html";
+                    }
+                </script>
+            </div>
+    </section>
+</body>
+</html>
